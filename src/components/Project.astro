@@ -1,0 +1,57 @@
+---
+import Badge from "./Badge.astro";
+import HeroButton from "./LinkButton.astro";
+
+const { title, description, image, technologies, buttons } = Astro.props;
+---
+
+<article
+  transition:name={`transition_${title}`}
+  class="grid grid-cols-2 items-center gap-6 p-6 rounded-lg bg-slate-900 ring-1 ring-white/20"
+>
+  <div class="flex flex-col gap-3">
+    <h3 class="text-xl font-semibold text-green-400/90">{title}</h3>
+    <p class="prose prose-invert text-slate-300 text-pretty">
+      {description}
+    </p>
+    <div class="flex flex-wrap gap-x-2 gap-y-3">
+      {technologies.map((title) => <Badge>{title}</Badge>)}
+    </div>
+    <div class="flex gap-4 mt-4">
+      {
+        buttons.map(({ title, href, Icon }) => (
+          <HeroButton href={href} color="green" newTab={true}>
+            <Icon class="w-4" /> {title}
+          </HeroButton>
+        ))
+      }
+    </div>
+  </div>
+
+  <img
+    loading="lazy"
+    class="max-w-sm mx-auto rounded-lg"
+    src={image}
+    alt={`Miniatura de ${title}`}
+  />
+</article>
+
+<style>
+  article {
+    animation-name: show;
+    animation-timeline: view();
+    animation-range: entry 5% cover 30%;
+  }
+
+  @keyframes show {
+    from {
+      opacity: 0;
+      transform: scale(0.9) perspective(2500px) translate(0, 100px)
+        rotateX(100deg);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1) perspective(2500px) translate(0) rotateX(0);
+    }
+  }
+</style>

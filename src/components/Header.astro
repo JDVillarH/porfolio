@@ -1,0 +1,42 @@
+---
+import { navLinks } from "../constants/data";
+---
+
+<header class="sticky top-0 w-full z-10">
+  <nav>
+    <ul class="max-w-screen-md mx-auto flex items-center justify-between gap-4">
+      {
+        navLinks.map(({ href, title }) => {
+          return (
+            <li class="font-semibold text-white">
+              <a
+                class="block transition hover:text-blue-500 active:scale-105"
+                href={href}
+              >
+                {title}
+              </a>
+            </li>
+          );
+        })
+      }
+    </ul>
+  </nav>
+</header>
+
+<style>
+  nav {
+    @apply h-16 text-sm flex items-center bg-gray-800/10;
+    animation: nav-shadown 1s linear both;
+    animation-timeline: scroll();
+    animation-range: 0 100px;
+  }
+
+  @keyframes nav-shadown {
+    0% {
+      @apply bg-gray-800/0;
+    }
+    to {
+      @apply shadow-lg ring-1 backdrop-blur ring-white/10;
+    }
+  }
+</style>

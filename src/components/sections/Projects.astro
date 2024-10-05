@@ -1,0 +1,29 @@
+---
+import { projects } from "../../constants/data";
+import HeroButton from "../LinkButton.astro";
+import Project from "../Project.astro";
+---
+
+<section class="grid gap-6 scroll-mt-20" id="proyectos">
+  <h2 class="text-3xl font-bold tracking-tight text-white">Proyectos</h2>
+
+  <div class="grid gap-4">
+    {
+      projects.map(({ title, description, image, technologies, buttons }) => (
+        <Project
+          title={title}
+          description={description}
+          image={image}
+          technologies={technologies}
+          buttons={buttons}
+        />
+      ))
+    }
+  </div>
+
+  <div class="w-fit mx-auto mt-6">
+    <HeroButton href="/proyectos" color="green" newTab={false}>
+      Ver todos los proyectos →
+    </HeroButton>
+  </div>
+</section>

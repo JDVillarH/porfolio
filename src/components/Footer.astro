@@ -1,0 +1,21 @@
+---
+import { heroSocialLinks } from "../constants/data";
+import HeroButton from "./LinkButton.astro";
+---
+
+<footer class="grid gap-6 text-white text-center">
+  <h1 class="text-4xl font-bold tracking-tight">¿Quieres contactarme?</h1>
+  <div class="flex justify-center gap-4 mt-4">
+    {
+      heroSocialLinks.map(({ title, href, SocialIcon }) => (
+        <HeroButton href={href} color="blue" newTab={true}>
+          <SocialIcon class="w-4" /> {title}
+        </HeroButton>
+      ))
+    }
+  </div>
+
+  <span class="text-xs text-slate-400 mt-36 mb-10">
+    Desarrolado por Juan Diego Villar Hernandez 2024.
+  </span>
+</footer>

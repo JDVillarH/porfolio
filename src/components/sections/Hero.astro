@@ -1,0 +1,36 @@
+---
+import { heroSocialLinks } from "../../constants/data";
+import HeroButton from "../LinkButton.astro";
+---
+
+<section class="grid gap-3 max-w-2xl">
+  <a
+    class="text-sm text-slate-100 bg-blue-600/80 px-2 py-1 rounded-full w-fit hover:text-white hover:bg-blue-700/80 hover:scale-105 transition"
+    href="https://www.linkedin.com/in/juandiegovh"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    ¡Listo para trabajar! 🚀
+  </a>
+
+  <h1 class="text-4xl font-bold text-white tracking-tight">
+    Juan Diego Villar Hernandez
+  </h1>
+
+  <p class="prose prose-invert text-xl text-slate-300">
+    <span class="text-sky-500 font-semibold">
+      {"<"} Desarrollador Web Full Stack {"/>"} con más de 3 años de experiencia.
+    </span> Capacitado, comprometido y con un gran interés por adquirir cada vez
+    más conocimientos y habilidades.
+  </p>
+
+  <footer class="flex gap-4 mt-4">
+    {
+      heroSocialLinks.map(({ title, href, SocialIcon }) => (
+        <HeroButton href={href} color="blue" newTab={true}>
+          <SocialIcon class="w-4" /> {title}
+        </HeroButton>
+      ))
+    }
+  </footer>
+</section>
