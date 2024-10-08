@@ -1,0 +1,27 @@
+---
+import { experience } from "../../constants/data";
+import Job from "../../icons/Job.astro";
+import Experience from "../Experience.astro";
+---
+
+<section class="grid gap-6 scroll-mt-20" id="experiencia">
+  <h2>
+    <Job /> Experiencia
+  </h2>
+
+  <div class="flex mt-2 mb-12">
+    <ul class="relative border-l border-slate-600 space-y-14">
+      {
+        experience.map(({ title, description, date, link, technologies }) => (
+          <Experience
+            title={title}
+            description={description}
+            date={date}
+            link={link}
+            technologies={technologies}
+          />
+        ))
+      }
+    </ul>
+  </div>
+</section>

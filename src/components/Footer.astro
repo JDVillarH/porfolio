@@ -1,6 +1,6 @@
 ---
 import { heroSocialLinks } from "../constants/data";
-import HeroButton from "./LinkButton.astro";
+import Button from "./LinkButton.astro";
 ---
 
 <footer class="grid gap-6 text-white text-center">
@@ -8,9 +8,9 @@ import HeroButton from "./LinkButton.astro";
   <div class="flex justify-center gap-4 mt-4">
     {
       heroSocialLinks.map(({ title, href, SocialIcon }) => (
-        <HeroButton href={href} color="blue" newTab={true}>
+        <Button href={href} color="blue" newTab={true}>
           <SocialIcon class="w-4" /> {title}
-        </HeroButton>
+        </Button>
       ))
     }
   </div>

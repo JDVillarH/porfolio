@@ -1,36 +1,36 @@
 ---
 import Badge from "./Badge.astro";
-import HeroButton from "./LinkButton.astro";
+import Button from "./LinkButton.astro";
 
 const { title, description, image, technologies, buttons } = Astro.props;
 ---
 
 <article
-  transition:name={`transition_${title}`}
-  class="grid grid-cols-2 items-center gap-6 p-6 rounded-lg bg-slate-900 ring-1 ring-white/20"
+  class="grid md:grid-cols-2 items-center gap-6 p-6 rounded-lg bg-slate-900 ring-1 ring-white/20"
 >
   <div class="flex flex-col gap-3">
     <h3 class="text-xl font-semibold text-green-400/90">{title}</h3>
-    <p class="prose prose-invert text-slate-300 text-pretty">
+    <p class="prose prose-invert text-slate-300">
       {description}
     </p>
     <div class="flex flex-wrap gap-x-2 gap-y-3">
       {technologies.map((title) => <Badge>{title}</Badge>)}
     </div>
-    <div class="flex gap-4 mt-4">
+    <div class="flex flex-wrap gap-2 md:gap-4 mt-4">
       {
         buttons.map(({ title, href, Icon }) => (
-          <HeroButton href={href} color="green" newTab={true}>
+          <Button href={href} color="green" newTab={true}>
             <Icon class="w-4" /> {title}
-          </HeroButton>
+          </Button>
         ))
       }
     </div>
   </div>
 
   <img
+    transition:name={`transition_${title}`}
     loading="lazy"
-    class="max-w-sm mx-auto rounded-lg"
+    class="w-full sm:max-w-sm mx-auto rounded-lg"
     src={image}
     alt={`Miniatura de ${title}`}
   />

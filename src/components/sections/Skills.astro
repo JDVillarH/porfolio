@@ -1,14 +1,17 @@
 ---
 import { skills } from "../../constants/data";
+import Brain from "../../icons/Brain.astro";
 ---
 
 <section class="grid gap-6 text-white">
-  <h2 class="text-3xl font-bold tracking-tight">Conocimientos</h2>
+  <h2>
+    <Brain /> Conocimientos
+  </h2>
 
-  <ul class="grid grid-cols-7 items-center gap-6 text-slate-300">
+  <ul class="grid-cols-auto-fit items-center gap-4 text-slate-300">
     {
       skills.map(({ title, Icon }) => (
-        <li class="px-2 py-4 flex gap-4 flex-col items-center rounded bg-slate-900 hover:bg-sky-900/60 hover:ring-1 hover:ring-white/20">
+        <li class="p-6 flex gap-4 flex-col items-center rounded bg-slate-900 hover:bg-sky-900/60 hover:ring-1 hover:ring-white/20">
           <Icon class="size-12" />
           <span class="text-sm">{title}</span>
         </li>

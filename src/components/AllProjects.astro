@@ -1,15 +1,13 @@
 ---
-import Project from "./Project.astro";
 import { projects } from "../constants/projects";
-import HeroButton from "./LinkButton.astro";
+import VSCode from "../icons/VSCode.astro";
+import Project from "./Project.astro";
 ---
 
-<section class="relative grid gap-6 mt-20" id="proyectos">
-  <div class="fixed top-10 left-10">
-    <HeroButton href="/#proyectos" color="blue">← Volver</HeroButton>
-  </div>
-
-  <h2 class="text-3xl font-bold tracking-tight text-white">Proyectos</h2>
+<section class="relative space-y-6">
+  <h2>
+    <VSCode /> Proyectos
+  </h2>
 
   <div class="grid gap-4">
     {

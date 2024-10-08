@@ -3,7 +3,7 @@ import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import About from "../components/sections/About.astro";
 import Certifications from "../components/sections/Certifications.astro";
-import Experience from "../components/sections/Experience.astro";
+import Experiences from "../components/sections/Experiences.astro";
 import Hero from "../components/sections/Hero.astro";
 import Projects from "../components/sections/Projects.astro";
 import Skills from "../components/sections/Skills.astro";
@@ -14,14 +14,16 @@ import "../styles/global.css";
 
 <Layout title="Porfolio Juan D. Villar | Desarrollador Web FullStack">
   <Header />
-  <main class="relative pt-12 max-w-screen-lg mx-auto grid gap-y-36">
+  <main
+    class="relative max-w-screen-lg mx-auto space-y-28 md:space-y-36 pt-12 xl:px-0 px-4"
+  >
     <Hero />
     <Social />
-    <Experience />
+    <Experiences />
     <Projects />
     <About />
-    <Skills />
     <Certifications />
+    <Skills />
     <Footer />
   </main>
 </Layout>

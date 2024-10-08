@@ -21,19 +21,19 @@ import TailwindCSS from "../icons/TailwindCSS.astro";
 const navLinks = [
   {
     title: "Experiencia",
-    href: "#experiencia",
+    href: "/#experiencia",
   },
   {
     title: "Proyectos",
-    href: "#proyectos",
+    href: "/#proyectos",
   },
   {
     title: "Sobre mí",
-    href: "#sobre-mi",
+    href: "/#sobre-mi",
   },
   {
     title: "Certificados",
-    href: "#certificados",
+    href: "/#certificados",
   },
 ];
 
@@ -204,30 +204,11 @@ const projects = [
       },
     ],
   },
-  {
-    title: "Nibiru Technologies",
-    description:
-      "Landing page para una agencia de tecnología enfocada en el desarrollo web en Chile. Este proyecto fue desarrollado en colaboración con mi colega Eday Daza.",
-    image: "nibiru_technologies.webp",
-    technologies: ["Astro", "CSS", "JavaScript"],
-    buttons: [
-      {
-        title: "Código",
-        href: "https://github.com/JDVillarH/nibiru_technology_website",
-        Icon: GitHub,
-      },
-      {
-        title: "Demo",
-        href: "https://nibirutechnologies.com/",
-        Icon: Linked,
-      },
-    ],
-  },
 ];
 
 const certificados = [
   {
-    title: "Tecnologo de Análisis y Desarrollo de Sistemas de Información",
+    title: "Tecnólogo de Análisis y Desarrollo de Sistemas de Información",
     href: "https://drive.google.com/file/d/198usOBK3Bg6EkKHg3ZM7qJp7Q_uGYgnq/view",
     subtitle: "SENA",
   },

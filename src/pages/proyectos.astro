@@ -1,11 +1,15 @@
 ---
 import AllProjects from "../components/AllProjects.astro";
+import Header from "../components/Header.astro";
 import Layout from "../layouts/Layout.astro";
 import "../styles/global.css";
 ---
 
-<Layout title="Porfolio Juan D. Villar | Desarrollador Web FullStack">
-  <main class="relative pt-12 max-w-screen-lg mx-auto grid gap-y-36">
+<Layout title="Porfolio Juan D. Villar | Proyectos">
+  <Header />
+  <main
+    class="relative max-w-screen-lg mx-auto space-y-28 md:space-y-36 pt-12 xl:px-0 px-4"
+  >
     <AllProjects />
     <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
   </main>

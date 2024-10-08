@@ -13,12 +13,48 @@ const { title } = Astro.props;
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
+    <meta name="author" content="Juan Diego Villar Hernandez" />
+    <meta name="theme-color" content="#00091d" />
+    <meta
+      name="description"
+      content="Desarrollador Web Full Stack con más de 3 años de experiencia enfocado en el ecosistema de PHP y JavaScript."
+    />
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://jdvillar.dev" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Porfolio Juan D. Villar | Desarrollador Web FullStack"
+    />
+    <meta
+      property="og:description"
+      content="Desarrollador Web Full Stack con más de 3 años de experiencia enfocado en el ecosistema de PHP y JavaScript."
+    />
+
+    <meta property="og:image" content="/meta_image.webp" />
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:domain" content="jdvillar.dev" />
+    <meta property="twitter:url" content="https://jdvillar.dev" />
+    <meta
+      name="twitter:title"
+      content="Porfolio Juan D. Villar | Desarrollador Web FullStack"
+    />
+    <meta
+      name="twitter:description"
+      content="Desarrollador Web Full Stack con más de 3 años de experiencia enfocado en el ecosistema de PHP y JavaScript."
+    />
+
+    <meta name="twitter:image" content="/meta_image.webp" />
+
     <ViewTransitions />
+
+    <title>{title}</title>
   </head>
   <body>
     <div

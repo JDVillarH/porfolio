@@ -1,7 +1,42 @@
 body {
-    font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
+}
+
+section h1,
+section h2 {
+  @apply font-bold tracking-tight text-white;
+}
+
+section h1 {
+  @apply text-3xl md:text-4xl;
+}
+
+section h2 {
+  @apply text-2xl md:text-3xl;
+}
+
+section p {
+  @apply text-[15px] md:text-base;
+}
+
+section h2:has(svg) {
+  @apply flex items-center gap-2;
+}
+
+section h2 svg {
+  @apply inline w-8 md:w-10;
+}
+
+p {
+  overflow-wrap: break-word;
+  text-wrap: pretty;
+}
+
+.grid-cols-auto-fit {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 7rem), 1fr));
 }
