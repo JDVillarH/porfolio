@@ -63,7 +63,7 @@ const heroSocialLinks = [
   },
   {
     title: "Curriculum",
-    href: "https://drive.google.com/file/d/136fsIuAoS7dSs9hVNMcE4reOpj_HZa8F/view",
+    href: "https://drive.google.com/file/d/1CQfxEwHZwGBS3OdAI4kg3iPno4RJXh4X/view",
     SocialIcon: FileChecked,
   },
   {
@@ -161,10 +161,24 @@ const experience = [
 
 const projects = [
   {
+    title: "MercyCorps",
+    description:
+      "Sitio web autoadministrable oficial en Colombia para una ONG sin fines de lucro que trabaja en más de 40 países, brinda asistencia humanitaria y fomenta el desarrollo sostenible en comunidades afectadas por crisis",
+    image: "/mercycorps.webp",
+    technologies: ["PHP 7", "MySQL", "SASS", "JQuery"],
+    buttons: [
+      {
+        title: "Sitio Web",
+        href: "https://mercycorps.org.co/",
+        Icon: Linked,
+      },
+    ],
+  },
+  {
     title: "GoURL - Acortador de enlaces",
     description:
       "Herramienta gratuita diseñada para acortar y personalizar enlaces. Cuenta con más de 200 enlaces acortados y con autenticación disponible a través de GitHub y Google.",
-    image: "url_shortener.webp",
+    image: "/url_shortener.webp",
     technologies: [
       "Laravel 11",
       "React 18",
@@ -181,25 +195,6 @@ const projects = [
       {
         title: "Demo",
         href: "https://short.jdvillar.dev/",
-        Icon: Linked,
-      },
-    ],
-  },
-  {
-    title: "PokeAPI - PHP Nativo",
-    description:
-      "Esta API ha sido diseñada desde cero con PHP nativo, ofreciendo una solución simple y eficiente para quienes buscan implementar o crear una API bajo los estándares REST.",
-    image: "pokeapi.webp",
-    technologies: ["PHP 8", "MySQL", "Composer"],
-    buttons: [
-      {
-        title: "Código",
-        href: "https://github.com/JDVillarH/api-php-nativo",
-        Icon: GitHub,
-      },
-      {
-        title: "Demo",
-        href: "https://pokeapi.jdvillar.dev/api/v1",
         Icon: Linked,
       },
     ],

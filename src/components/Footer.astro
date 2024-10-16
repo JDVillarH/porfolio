@@ -4,7 +4,10 @@ import Button from "./LinkButton.astro";
 ---
 
 <footer class="grid gap-6 text-white text-center">
-  <h1 class="text-4xl font-bold tracking-tight">¿Quieres contactarme?</h1>
+  <div class="space-y-1">
+    <h1 class="text-4xl font-bold tracking-tight">¿Quieres contactarme?</h1>
+    <p class="text-lg">juandiegom78@gmail.com</p>
+  </div>
   <div class="flex justify-center gap-4 mt-4">
     {
       heroSocialLinks.map(({ title, href, SocialIcon }) => (
